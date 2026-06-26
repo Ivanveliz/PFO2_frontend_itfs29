@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Agentes IA - Portada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        h1, h2 { font-family: 'Oswald', sans-serif; }
+        /* Clases para animar el modal suavemente */
+        .modal-active { display: flex !important; }
+    </style>
+</head>
+<body class="bg-zinc-900 text-gray-100 min-h-screen flex items-center justify-center p-6 relative">
+
+    <div class="max-w-3xl w-full bg-zinc-800 rounded-2xl shadow-2xl overflow-hidden border border-zinc-700 z-10">
+        <div class="bg-zinc-950 p-8 text-center border-b border-orange-600">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2 uppercase tracking-wide">Evaluación de <span class="text-orange-500">Agentes Autónomos</span></h1>
+            <p class="text-gray-400 text-lg">Comparativa de generación de Landing Pages mediante Zero-Shot Prompting</p>
+        </div>
+
+        <div class="p-8 space-y-6">
+            <button onclick="toggleModal('promptModal')" class="w-full text-left block group focus:outline-none">
+                <div class="flex items-center p-5 bg-zinc-700/50 rounded-xl border border-zinc-600 hover:border-orange-500 hover:bg-zinc-700 transition-all duration-300">
+                    <div class="flex-shrink-0 bg-zinc-800 p-3 rounded-lg group-hover:bg-orange-500 transition-colors">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <div class="ml-4">
+                        <h2 class="text-xl font-semibold text-white group-hover:text-orange-400 transition-colors">1. Ver el Prompt Original</h2>
+                        <p class="text-gray-400 text-sm mt-1">Clic para leer la instrucción exacta proporcionada a los agentes.</p>
+                    </div>
+                </div>
+            </button>
+
+            <a href="./antigravity/index.html" class="block group">
+                <div class="flex items-center p-5 bg-zinc-700/50 rounded-xl border border-zinc-600 hover:border-orange-500 hover:bg-zinc-700 transition-all duration-300">
+                    <div class="flex-shrink-0 bg-zinc-800 p-3 rounded-lg group-hover:bg-orange-500 transition-colors">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div class="ml-4">
+                        <h2 class="text-xl font-semibold text-white group-hover:text-orange-400 transition-colors">2. Resultado Primer Agente</h2>
+                        <p class="text-gray-400 text-sm mt-1">Generado por: <strong>Gemini</strong> (Modelo: <strong>2.5 Flash</strong>)</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="./claude/index.html" class="block group">
+                <div class="flex items-center p-5 bg-zinc-700/50 rounded-xl border border-zinc-600 hover:border-orange-500 hover:bg-zinc-700 transition-all duration-300">
+                    <div class="flex-shrink-0 bg-zinc-800 p-3 rounded-lg group-hover:bg-orange-500 transition-colors">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <div class="ml-4">
+                        <h2 class="text-xl font-semibold text-white group-hover:text-orange-400 transition-colors">3. Resultado Segundo Agente</h2>
+                        <p class="text-gray-400 text-sm mt-1">Generado por: <strong>Claude</strong> (Modelo: <strong>Haiku 4.5</strong>)</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div id="promptModal" class="hidden fixed inset-0 z-50 items-center justify-center bg-black/80 backdrop-blur-sm p-4 transition-opacity duration-300">
+        <div class="bg-zinc-900 border border-zinc-700 rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl relative">
+            
+            <div class="flex justify-between items-center p-6 border-b border-zinc-800">
+                <h3 class="text-2xl font-bold text-white uppercase tracking-wide">Prompt <span class="text-orange-500">Zero-Shot</span></h3>
+                <button onclick="toggleModal('promptModal')" class="text-gray-400 hover:text-white hover:bg-zinc-800 p-2 rounded-lg transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <div class="p-6 overflow-y-auto bg-zinc-950/50 flex-grow custom-scrollbar">
+                <pre class="whitespace-pre-wrap font-mono text-sm text-gray-300 leading-relaxed">
+Actúa como un Desarrollador Frontend experto y diseñador UI/UX especializado en landing pages de alta conversión. Tu tarea es generar el código completo de una Landing Page moderna y responsiva para un Preparador Físico profesional especializado en entrenamiento personalizado para salud, fuerza y rendimiento deportivo. Debes operar de manera completamente autónoma y entregar únicamente el código final, sin hacer preguntas adicionales.
+
+Técnicamente, requiero que utilices HTML5 estricto y que todo el diseño se realice exclusivamente con Tailwind CSS importado a través de su CDN (<script src="https://cdn.tailwindcss.com"></script>). No debes escribir CSS personalizado ni utilizar hojas de estilo externas. Para la iconografía, utiliza FontAwesome mediante CDN. Además, debes importar desde Google Fonts tipografías que transmitan fuerza e inspiración: utiliza una fuente condensada e impactante para los títulos (como 'Oswald', 'Bebas Neue' o 'Teko') y una fuente sans-serif limpia y moderna para el cuerpo de texto (como 'Montserrat' o 'Inter'). El diseño debe estar pensado bajo el enfoque "mobile-first" y ser completamente responsivo en todos los tamaños de pantalla.
+
+La página web debe incluir las siguientes secciones, exactamente en este orden:
+1. Cabecera (Header): Una barra de navegación fija (sticky) que muestre la marca personal del preparador físico y enlaces con efecto de scroll suave (smooth-scroll) hacia las distintas secciones.
+2. Hero Section: Una sección principal muy visual con un título de gran impacto centrado en la mejora de la salud, la fuerza y el rendimiento físico, un subtítulo descriptivo que transmita confianza y profesionalismo, y un botón principal de llamada a la acción (CTA) destacado para solicitar una evaluación o consulta.
+3. Sobre Mí: Un bloque que explique la filosofía de trabajo del preparador físico de nombre Iván Veliz, enfocada en el entrenamiento basado en evidencia, la progresión individual y la mejora de la calidad de vida o el rendimiento deportivo según los objetivos de cada persona.
+4. Servicios: Una sección maquetada en formato de cuadrícula (grid) que detalle servicios clave. Incluye un ícono pertinente para cada servicio. Los servicios deben contemplar:
+   * Entrenamiento personalizado para salud y bienestar.
+   * Planes de entrenamiento orientados al desarrollo de fuerza.
+   * Preparación física para deportes.
+   * Seguimiento y ajustes periódicos de la planificación.
+   * Entrenamiento para principiantes.
+   * Programas para personas con objetivos específicos de rendimiento.
+5. Proceso de Trabajo: Una sección visual que explique paso a paso cómo funciona el servicio (Evaluación Inicial → Diseño del Plan → Seguimiento → Resultados).
+6. Testimonios: Una sección que muestre al menos dos reseñas realistas de clientes, incluyendo sus nombres, profesión o actividad y resultados obtenidos mediante el entrenamiento.
+7. Contacto: La maquetación visual completa de un formulario de contacto (campos para Nombre, Correo, Objetivo, Mensaje y Botón de Enviar). No es necesaria la lógica del backend, solo el diseño visual.
+8. Pie de página (Footer): Un cierre profesional que contenga los derechos de autor y enlaces visuales (mockups) a redes sociales.
+
+Estilo visual requerido:
+* Paleta de colores (Dark Mode): Utiliza un esquema oscuro predominante. Los fondos principales deben ser grises oscuros profundos (ej. bg-zinc-900, bg-gray-800).
+* Color de acento: Utiliza un naranja fuerte y vibrante (ej. orange-500, orange-600) exclusivamente para resaltar detalles clave, íconos, bordes sutiles y botones de llamada a la acción (CTAs).
+* Diseño moderno, premium y profesional que evoque determinación y energía.
+* Enfoque visual relacionado con entrenamiento, fuerza, salud y rendimiento deportivo.
+* Uso de gradientes modernos de Tailwind CSS respetando los tonos oscuros y naranjas.
+* Tarjetas con sombras suaves y efecto hover.
+* Tipografía clara, de alto contraste (texto claro sobre fondo oscuro) y jerarquía visual muy marcada.
+* Botones de llamada a la acción altamente visibles.
+* Experiencia optimizada para conversión de potenciales clientes.
+
+Restricciones de salida: El resultado de tu respuesta debe ser ÚNICAMENTE el código HTML válido y limpio, contenido dentro de un solo bloque de código. Por favor, omite cualquier saludo, explicación o texto conversacional en formato Markdown antes o después del código. Los textos de la página deben estar escritos en español de manera realista y profesional, quedando estrictamente prohibido el uso de "Lorem Ipsum". No debes incluir planes nutricionales, asesoramiento nutricional ni referencias a dietas. Todo el enfoque debe estar exclusivamente orientado al entrenamiento físico, la salud, la fuerza y el rendimiento deportivo. Para las imágenes o fondos, utiliza los gradientes modernos de Tailwind CSS.
+                </pre>
+            </div>
+
+            <div class="p-4 border-t border-zinc-800 flex justify-end bg-zinc-900 rounded-b-2xl">
+                <button onclick="toggleModal('promptModal')" class="px-6 py-2 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg transition-colors border border-zinc-700">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal(modalID) {
+            document.getElementById(modalID).classList.toggle('hidden');
+            document.getElementById(modalID).classList.toggle('modal-active');
+            // Prevenir scroll en el body cuando el modal está abierto
+            if(document.getElementById(modalID).classList.contains('modal-active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Cerrar modal al hacer click afuera de la caja de contenido
+        window.onclick = function(event) {
+            const modal = document.getElementById('promptModal');
+            if (event.target == modal) {
+                toggleModal('promptModal');
+            }
+        }
+    </script>
+</body>
+</html>
