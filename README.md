@@ -47,7 +47,8 @@ Estilo visual requerido:
 * Botones de llamada a la acción altamente visibles.
 * Experiencia optimizada para conversión de potenciales clientes.
 
-Restricciones de salida: El resultado de tu respuesta debe ser ÚNICAMENTE el código HTML válido y limpio, contenido dentro de un solo bloque de código. Por favor, omite cualquier saludo, explicación o texto conversacional en formato Markdown antes o después del código. Los textos de la página deben estar escritos en español de manera realista y profesional, quedando estrictamente prohibido el uso de "Lorem Ipsum". No debes incluir planes nutricionales, asesoramiento nutricional ni referencias a dietas. Todo el enfoque debe estar exclusivamente orientado al entrenamiento físico, la salud, la fuerza y el rendimiento deportivo. Para las imágenes o fondos, utiliza los gradientes modernos de Tailwind CSS.
+Restricciones de salida: El resultado de tu respuesta debe ser ÚNICAMENTE el código HTML válido y limpio, contenido dentro de un solo bloque de código. Por favor, omite cualquier saludo, explicación o texto conversacional en formato Markdown antes o después del código. Los textos de la página deben estar escritos en español de manera realista y profesional, quedando estrictamente prohibido el uso de "Lorem Ipsum". No debes incluir planes nutricionales, asesoramiento nutricional ni referencias a dietas. Todo el enfoque debe estar exclusivamente orientado al entrenamiento físico, la salud, la fuerza y el rendimiento deportivo. Para las imágenes o fondos, utiliza los gradientes modernos de Tailwind CSS. 
+```
 
 
 ## Capturas de pantalla de ambos sitios web generados
