@@ -8,7 +8,7 @@ Este proyecto es un experimento de evaluación de agentes de IA mediante una té
 
 ## 🚀 Link al deploy unificado
 Desde el siguiente enlace se accede a la portada principal desplegada en Vercel, la cual distribuye hacia los resultados generados por cada agente:
-👉 **[]**
+👉 **[https://pfo-2-frontend-itfs29-hazel.vercel.app/]**
 
 ---
 
@@ -55,7 +55,16 @@ Restricciones de salida: El resultado de tu respuesta debe ser ÚNICAMENTE el c�
 A continuación se muestran los resultados visuales generados por cada modelo de lenguaje sin intervención manual en el código:
 
 ### 1. Agente: Gemini (Modelo: 1.5 Flash)
-![Captura Landing Gemini](./images/gemini.png)
+![Captura Landing Gemini 1](./images/gemini/g1.png)
+![Captura Landing Gemini 2](./images/gemini/g2.png)
+![Captura Landing Gemini 3](./images/gemini/g3.png)
+![Captura Landing Gemini 4](./images/gemini/g4.png)
+![Captura Landing Gemini 5](./images/gemini/g5.png)
 
 ### 2. Agente: Claude (Modelo: 3.5 Haiku)
-![Captura Landing Claude](./images/claude.png)
+![Captura Landing Claude 1 ](./images/claude/c1.png)
+![Captura Landing Claude 2](./images/claude/c2.png)
+![Captura Landing Claude 3](./images/claude/c3.png)
+![Captura Landing Claude 4](./images/claude/c4.png)
+![Captura Landing Claude 5](./images/claude/c5.png)
+![Captura Landing Claude 6](./images/claude/c6.png)
